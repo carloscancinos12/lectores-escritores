@@ -7,7 +7,6 @@ package main;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.time.LocalDateTime;
-import java.util.concurrent.Semaphore;
 
 /**
  *
@@ -83,13 +82,18 @@ public class frmMain extends javax.swing.JFrame {
             biblioteca[0][siguiente_espacio] = libro;
             biblioteca[1][siguiente_espacio] = this.getAutor();
             siguiente_espacio++;
-            horaFin = LocalDateTime.now();
             actualizarBiblioteca();
+            horaFin = LocalDateTime.now();
             System.out.println(getAutor() + " abandonando la biblioteca");
+            calcularInanicion();
         }
         
         public String getAutor() {
             return "Autor No. " + String.valueOf(noAutor);
+        }
+        
+        public void calcularInanicion() {
+            //
         }
     }
     
