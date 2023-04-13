@@ -11,7 +11,7 @@ import java.util.concurrent.Semaphore;
 
 /**
  *
- * @author mfmatul
+ * @author Miguel Matul <https://github.com/MigueMat4>
  */
 public class frmMain extends javax.swing.JFrame {
     
