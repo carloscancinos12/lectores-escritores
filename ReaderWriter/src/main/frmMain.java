@@ -7,6 +7,7 @@ package main;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.time.LocalDateTime;
+import java.util.concurrent.Semaphore;
 
 /**
  *
@@ -70,8 +71,9 @@ public class frmMain extends javax.swing.JFrame {
         public void run() {
             int numLibro = (int) (Math.random() * (19 - 0)) + 0;
             libro = librosPorEscribir[numLibro];
-            System.out.println("Autor No. " + noAutor + " quiere entrar a la biblioteca");
             horaInicio = LocalDateTime.now();
+            System.out.println("Autor No. " + noAutor + " quiere entrar a la biblioteca");
+            System.out.println("Autor No. " + noAutor + " escribiendo su libro");
             try {
                 // tarda 5 segundos en escribir un libro
                 Thread.sleep(5000);
